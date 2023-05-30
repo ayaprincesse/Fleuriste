@@ -22,10 +22,10 @@ public class AdminServiceImpl implements AdminService {
         return  administrateurRepository.findById(id).get();
     }
 
-    @Override
-    public Administrateurs getAdminByData(String username) {
-        return administrateurRepository.findByUsername(username);
-    }
+   // @Override
+   // public Administrateurs getAdminByData(String username) {
+   //     return administrateurRepository.findByUsername(username);
+   // }
 
     @Override
     public void deleteAdminById(Long id) {

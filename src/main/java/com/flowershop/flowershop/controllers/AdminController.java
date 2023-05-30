@@ -13,26 +13,28 @@ public class AdminController {
 
     @Autowired
     AdminService adminService;
-    @RequestMapping("/LoginPageAdmin")
-    public String LoginPageAdmin(){
-        return "Login";
-    }
 
-    @RequestMapping("loginAdmin")
-    public String loginAdmin(@RequestParam("username") String username, @RequestParam("password") String password){
-        Administrateurs admin = adminService.getAdminByData(username);
-        if (admin != null) {
+
+    //@RequestMapping("/LoginPageAdmin")
+    //public String LoginPageAdmin(){
+      //  return "Login";
+    //}
+
+    //@RequestMapping("loginAdmin")
+    //public String loginAdmin(@RequestParam("username") String username, @RequestParam("password") String password){
+    //    Administrateurs admin = adminService.getAdminByData(username);
+    //    if (admin != null) {
             //admin Found
-            if (admin.getPassword()!=password) { // wrong password
-                return "Login";
-            }
-            else {
-                    return "fleurList";
-            }
-        } else {
-            return "Login";
-        }
+    //        if (admin.getPassword()!=password) { // wrong password
+    //            return "Login";
+    //        }
+    //        else {
+    //                return "fleurList";
+    //        }
+    //    } else {
+    //       return "Login";
+    //    }
 
-    }
+    //}
 
 }

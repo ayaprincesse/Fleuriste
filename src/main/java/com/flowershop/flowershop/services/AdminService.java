@@ -10,6 +10,6 @@ public interface AdminService {
     Administrateurs saveAdmin(Administrateurs admin);
     Administrateurs updateAdmin(Administrateurs admin);
     Administrateurs getAdmin(Long id);
-    Administrateurs getAdminByData(String username);
+    //Administrateurs getAdminByData(String username);
     void deleteAdminById(Long id);
 }

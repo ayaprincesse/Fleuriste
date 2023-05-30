@@ -23,6 +23,7 @@ public class FleurController {
     public String CreateFleur(){
         return "CreateFleur";
     }
+
     //@RequestMapping("saveFleur")
     //public String saveFleur(@ModelAttribute("fleur") Fleur fleur){
       //  fleurService.saveFleur(fleur);
@@ -41,7 +42,7 @@ public class FleurController {
 
     @RequestMapping("/fleurList")
     public String fleurList(ModelMap modelMap){
-        List<Fleur> fleurcontroller = fleurService.getAllFleurs();
+        List<Fleur> fleurcontroller = fleurService.SeeAllFlowers();
         modelMap.addAttribute("fleursJsp",fleurcontroller);
         //this is the name of the jsp file
         return "FleurList";
@@ -49,8 +50,8 @@ public class FleurController {
 
     @RequestMapping("/deleteFleur")
     public String deleteFleur(@RequestParam("id") Long id,ModelMap modelMap){
-        fleurService.deleteFleurById(id);
-        List<Fleur> fleurcontroller = fleurService.getAllFleurs();
+        fleurService.DeleteFlower(id);
+        List<Fleur> fleurcontroller = fleurService.SeeAllFlowers();
         modelMap.addAttribute("fleursJsp",fleurcontroller);
         //this is the name of the jsp file
         return "FleurList";
